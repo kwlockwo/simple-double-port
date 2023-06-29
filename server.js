@@ -7,11 +7,11 @@ const internalApp = express()
 const internalPort = process.env.INTERNAL_PORT || 6000
 
 externaApp.get("/", (req, res) => {
-    res.send(`You have reached the external app on port=${externalPort}`)
+    res.send(`You have reached the external app on port=${externalPort}\n`)
 })
 
 internalApp.get("/", (req, res) => {
-    res.send(`You have reached the internal app on port=${internalPort}`)
+    res.send(`You have reached the internal app on port=${internalPort}\n`)
 })
 
 externaApp.listen(externalPort, () => {
